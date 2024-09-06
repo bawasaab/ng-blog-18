@@ -1,0 +1,102 @@
+
+<router-outlet />
+
+<mat-toolbar color="primary" class="toolbar">
+    <button mat-icon-button (click)="sidenav.toggle()" class="menu-icon" *ngIf="isSmallScreen">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Menu</span>
+    <span class="spacer"></span>
+  
+    <!-- Horizontal navbar for large screens -->
+    <div class="menu-items" *ngIf="!isSmallScreen">
+      <button mat-button [matMenuTriggerFor]="menu1">Documentation</button>
+      <button mat-button [matMenuTriggerFor]="menu2">Download</button>
+    </div>
+  
+    <!-- User menu -->
+    <button mat-icon-button [matMenuTriggerFor]="userMenu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #userMenu="matMenu">
+      <button mat-menu-item>Profile</button>
+      <button mat-menu-item>Settings</button>
+      <button mat-menu-item>Logout</button>
+    </mat-menu>
+</mat-toolbar>
+  
+<!-- Side navigation for small screens -->
+<mat-sidenav-container class="sidenav-container" autosize *ngIf="isSmallScreen">
+    <mat-sidenav #sidenav mode="over" class="sidenav">
+        
+        <mat-nav-list>
+            <!-- <button mat-list-item [matMenuTriggerFor]="menu1">Menu 1</button>
+            <button mat-list-item [matMenuTriggerFor]="menu2">Menu 2</button>
+            <button mat-list-item [matMenuTriggerFor]="menu3">Menu 3</button> -->
+
+            <!-- expansion menu starts here -->
+            <!-- Documentation Section -->
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Documentation
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <mat-action-list>
+                    <mat-list-item>Getting Started</mat-list-item>
+                    <mat-list-item>API Reference</mat-list-item>
+                    <mat-list-item>FAQ</mat-list-item>
+                </mat-action-list>
+            </mat-expansion-panel>
+            
+            <!-- Download Section -->
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Download
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <mat-action-list>
+                    <mat-list-item>Version 1.0</mat-list-item>
+                    <mat-list-item>Version 2.0</mat-list-item>
+                </mat-action-list>
+            </mat-expansion-panel>
+            <!-- expansion menu ends here -->
+        </mat-nav-list>
+
+    </mat-sidenav>
+    
+    <mat-sidenav-content>
+        <!-- <div class="content"> -->
+            <!-- Full width ad banner at the top -->
+            <div class="ad-banner">
+                <p>Your Ad Here - Full Width Banner</p>
+            </div>
+
+            <h1>Side Menu Page Content</h1>
+            <p>This is the Side Menu Page Conten of the page that will be displayed alongside or instead of the side menu, depending on the screen size.</p>
+        <!-- </div> -->
+    </mat-sidenav-content>
+</mat-sidenav-container>
+  
+<!-- Nested menus -->
+<mat-menu #menu1="matMenu">
+<button mat-menu-item>Getting Started</button>
+<button mat-menu-item>API Reference</button>
+<button mat-menu-item>FAQ</button>
+</mat-menu>
+
+<mat-menu #menu2="matMenu">
+<button mat-menu-item>Version 1.0</button>
+<button mat-menu-item>Version 2.0</button>
+</mat-menu>
+  
+<div *ngIf="!isSmallScreen">
+    <!-- Full width ad banner at the top -->
+    <div class="ad-banner">
+        <p>Your Ad Here - Full Width Banner</p>
+    </div>
+
+    <h1>Main Page Content</h1>
+    <p>This is the main content of the page that will be displayed alongside or instead of the side menu, depending on the screen size.</p>
+</div>

@@ -1,0 +1,182 @@
+section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    max-width: 600px;
+  }
+  
+  .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+
+  .sidenav-container {
+    display: none;
+    height: 100%;
+  }
+  
+  /* Full-width toolbar with navbar items */
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .menu-items {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .spacer {
+    flex: 1;
+  }
+  
+  /* For small screens */
+  @media (max-width: 768px) {
+    .menu-items {
+      display: none; /* Hide horizontal menu */
+    }
+  
+    .sidenav-container {
+      display: block; /* Show sidenav on small screens */
+    }
+  
+    .toolbar {
+      justify-content: space-between;
+    }
+  }
+  
+  /* app.component.css */
+
+/* Toolbar Styling */
+
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #007fff; /* Light background */
+    color: black;
+    padding: 10px;
+}
+  
+  /* Spacer for alignment */
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  /* Menu Items Styling */
+  .menu-items button {
+    color: white;
+    margin-right: 15px;
+  }
+  
+  /* Small screen sidenav styling */
+  .sidenav-container {
+    height: 100%;
+    background-color: #f4f4f4; /* Light background for contrast */
+  }
+  
+  .sidenav {
+    background-color: #007fff; /* Azure Blue background for the sidenav */
+    color: white;
+    width: 250px;
+    padding: 10px;
+  }
+  
+  .sidenav button {
+    color: white;
+  }
+  
+  .sidenav mat-list-item {
+    font-weight: bold;
+  }
+  
+  /* For buttons, using Material design principles */
+  button.mat-button {
+    background-color: #007fff; /* Azure Blue */
+    color: white;
+  }
+  
+  button.mat-button:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+  }
+  
+  /* Icons */
+  .mat-icon-button {
+    color: white;
+  }
+  
+  /* Adjust the content for padding */
+  .content {
+    padding: 20px;
+  }
+
+  
+  /* app.component.css */
+
+/* Responsive Toolbar */
+@media (max-width: 768px) {
+    .menu-items {
+      display: none; /* Hide horizontal menu on small screens */
+    }
+  
+    .toolbar {
+      justify-content: space-between;
+    }
+  
+    .sidenav-container {
+      display: block; /* Show sidenav on small screens */
+    }
+  }
+  
+  /* Sidenav behavior for small screens */
+  @media (max-width: 768px) {
+    .sidenav {
+      width: 100%; /* Full width for small screens */
+    }
+  }
+  
+
+  /* app.component.css */
+
+/* Sidenav behavior for small screens */
+@media (max-width: 768px) {
+    .sidenav {
+      width: 70%; /* Occupy 75% of the screen width */
+    }
+  }
+
+  .mat-expansion-panel {
+    margin-bottom: 10px;
+    border: none;
+}
+
+/* Full-width ad banner styling */
+.ad-banner {
+  width: 100%;
+  background-color: grey; /* Yellow banner for visibility */
+  color: black;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 16px;
+  height: 170px;
+}
