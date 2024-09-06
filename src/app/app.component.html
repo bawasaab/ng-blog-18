@@ -97,6 +97,38 @@
         <p>Your Ad Here - Full Width Banner</p>
     </div>
 
-    <h1>Main Page Content</h1>
-    <p>This is the main content of the page that will be displayed alongside or instead of the side menu, depending on the screen size.</p>
+    <div class="">
+
+        <mat-grid-list cols="12" style="border: 1px solid red;">
+                <mat-grid-tile
+                    [colspan]="3"
+                    [rowspan]="1"
+                    style="min-height: 400px;overflow: inherit;"
+                    [style.background]="'red'">
+                Left-Side
+                </mat-grid-tile>
+
+                <mat-grid-tile
+                    [colspan]="6"
+                    [rowspan]="1"
+                    style="max-height:2000; height: 400px;"
+                    [style.background]="'blue'">
+                Main-Content
+                </mat-grid-tile>
+
+                <mat-grid-tile
+                    [colspan]="3"
+                    [rowspan]="1"
+                    style="min-height: 400px;"
+                    [style.background]="'yellow'">
+                Right-Side
+                </mat-grid-tile>
+
+
+        </mat-grid-list>
+
+        <!-- <h1>Main Page Content</h1>
+        <p>This is the main content of the page that will be displayed alongside or instead of the side menu, depending on the screen size.</p> -->
+    </div>
+
 </div>
